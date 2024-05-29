@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranish K's Portfolio</title>
+    <meta name="description" content="Pranish K's portfolio showcasing skills, projects, and contact information. Full Stack Software Developer with expertise in JavaScript, React, Node.js, and more.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0.5rem 0;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            color: #555;
+        }
+
+        .hero .buttons {
+            margin-top: 2rem;
+        }
+
+        .hero .buttons a {
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.5rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .hero .buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            background-color: #f4f4f4;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section .content ul li {
+            background: #fff;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin: 1rem 0;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #0056b3;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .project-item a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .project-item a:hover {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Add responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero .buttons a {
+                padding: 0.5rem 1rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMjhcY/OchHR7xQQr29kJ5J+U28an+Yj/Q8XhTX" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <div class="logo">Pranish K</div>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <img src="profile.jpg" alt="Pranish K's Profile Picture">
+        <h1>Hi all, I'm Pranish K <span>&#128075;</span></h1>
+        <p>A passionate Full Stack Software Developer having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.</p>
+        <div class="social-links">
+            <a href="https://github.com/Pranish7D" target="_blank"><i class="fab fa-github" aria-label="GitHub"></i></a>
+            <a href="https://www.linkedin.com/in/pranish-k-b8672624a/" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+            <a href="mailto:kishorepranish@gmail.com"><i class="fab fa-google" aria-label="Email"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook" aria-label="Facebook"></i></a>
+        </div>
+        <div class="buttons">
+            <a href="#contact">Contact Me</a>
+            <a href="#resume">See My Resume</a>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="content">
+            <ul>
+                <li>Java, C/C++, HTML, CSS, Python, JavaScript</li>
+                <li>Nessus, OWASP, Web Architecture, MySQL, Ethical Hacking, Network Fundamentals</li>
+                <li>Leadership, Implementation Planning, Teamwork</li>
+                <li>IAM, Burp Suite, Bash Scripting, Networking, API Testing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="content projects-grid">
+            <div class="project-item">
+                <img src="fakeid.webp" alt="Instagram Fake Id Detection">
+                <a href="https://github.com/Pranish7D/Instagram-Fake-Id-Detection-" target="_blank">Instagram Fake Id Detection</a>
+            </div>
+            <div class="project-item">
+                <img src="disease.jpg" alt="Disease Prediction Analysis">
+                <a href="https://github.com/Pranish7D/Disease-Prediction-Analysis" target="_blank">Disease Prediction Analysis</a>
+            </div>
+            <div class="project-item">
+                <img src="college.jpg" alt="College Workshop Website">
+                <a href="https://github.com/Pranish7D/My-Second-Website" target="_blank">College Workshop Website</a>
+            </div>
+            <div class="project-item">
+                <img src="basic.jpg" alt="Basic Website">
+                <a href="https://github.com/Pranish7D/My-First-Website" target="_blank">Basic Website</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section">
+        <h2>Resume</h2>
+        <div class="content">
+            <a class="resume-button" href="https://drive.google.com/file/d/1Mt7WEdV7kZ_BAECJJbaWMrrRE1zYBZgX/view?usp=sharing" download>Download My Resume</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="content">
+            <p>Email: <a href="mailto:kishorepranish@gmail.com">kishorepranish@gmail.com</a></p>
+            <p>Phone: <a href="tel:9952544567">995-254-4567</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pranish-k-b8672624a/" target="_blank"><i class="fab fa-linkedin" aria-label="LinkedIn"></i></a>
+                <a href="https://www.instagram.com/your-instagram-username/" target="_blank"><i class="fab fa-instagram" aria-label="Instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Pranish K. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
